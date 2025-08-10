@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="reveal.css">
+</head>
+<body>
+    <section>
+        <h1>Reveal Elements on Scroll</h1>
+    </section>
+
+    <section>
+        <div class="container reveal">
+            <h2>Your Title</h2>
+            <div class="cards">
+                <div class="text-card">
+                    <h3>Title</h3>
+                    <p>Lorem ipsum amet consectetur adipisicing elit. Nostrum explicabo quo iste, rem vel itaque Lorem, ipsum dolor sit amet consectetur adipisicing elit. Quae, ipsam!</p>
+                </div>
+
+                <div class="text-card">
+                    <h3>Title</h3>
+                    <p>Lorem ipsum amet consectetur adipisicing elit. Nostrum explicabo quo iste, rem vel itaque Lorem, ipsum dolor sit amet consectetur adipisicing elit. Quae, ipsam!</p>
+                </div>
+
+                <div class="text-card">
+                    <h3>Title</h3>
+                    <p>Lorem ipsum amet consectetur adipisicing elit. Nostrum explicabo quo iste, rem vel itaque Lorem, ipsum dolor sit amet consectetur adipisicing elit. Quae, ipsam!</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section>
+        <div class="container reveal">
+            <h2>Your Title</h2>
+            <div class="cards">
+                <div class="text-card">
+                    <h3>Title</h3>
+                    <p>Lorem ipsum amet consectetur adipisicing elit. Nostrum explicabo quo iste, rem vel itaque Lorem, ipsum dolor sit amet consectetur adipisicing elit. Quae, ipsam!</p>
+                </div>
+
+                <div class="text-card">
+                    <h3>Title</h3>
+                    <p>Lorem ipsum amet consectetur adipisicing elit. Nostrum explicabo quo iste, rem vel itaque Lorem, ipsum dolor sit amet consectetur adipisicing elit. Quae, ipsam!</p>
+                </div>
+
+                <div class="text-card">
+                    <h3>Title</h3>
+                    <p>Lorem ipsum amet consectetur adipisicing elit. Nostrum explicabo quo iste, rem vel itaque Lorem, ipsum dolor sit amet consectetur adipisicing elit. Quae, ipsam!</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section>
+        <div class="container reveal">
+            <h2>Your Title</h2>
+            <div class="cards">
+                <div class="text-card">
+                    <h3>Title</h3>
+                    <p>Lorem ipsum amet consectetur adipisicing elit. Nostrum explicabo quo iste, rem vel itaque Lorem, ipsum dolor sit amet consectetur adipisicing elit. Quae, ipsam!</p>
+                </div>
+
+                <div class="text-card">
+                    <h3>Title</h3>
+                    <p>Lorem ipsum amet consectetur adipisicing elit. Nostrum explicabo quo iste, rem vel itaque Lorem, ipsum dolor sit amet consectetur adipisicing elit. Quae, ipsam!</p>
+                </div>
+
+                <div class="text-card">
+                    <h3>Title</h3>
+                    <p>Lorem ipsum amet consectetur adipisicing elit. Nostrum explicabo quo iste, rem vel itaque Lorem, ipsum dolor sit amet consectetur adipisicing elit. Quae, ipsam!</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <script type="text/javascript">
+        window.addEventListener('scroll', reveal);
+
+        function reveal(){
+            var reveals = document.querySelectorAll('.reveal');
+            for(var i = 0; i < reveals.length; i++){
+                var windowheight = window.innerHeight;
+                var revealtop = reveals[i].getBoundingClientRect().top;
+                var revealpoint = 20;
+
+                if(revealtop < windowheight - revealpoint){
+                    reveals[i].classList.add('active');
+                }
+                else{
+                    reveals[i].classList.remove('active');
+                }
+            }
+        }
+    </script>
+</body>
+</html>

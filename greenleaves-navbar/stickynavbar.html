@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Responsive Sticky navbar</title>
+    <link rel="stylesheet" href="navbar.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+</head>
+<body>
+    <header>
+        <a href="#" class="brand">Brand</a>
+        <div class="menu">
+            <div class="btn">
+                <i class="fas fa-times close-btn"></i>
+            </div>
+            <a href="#">Home</a>
+            <a href="#">Services</a>
+            <a href="#">About</a>
+            <a href="#">Blog</a>
+            <a href="#">Contact us</a>
+        </div>
+        <div class="btn">
+            <i class="fas fa-bars menu-btn"></i>
+        </div>
+    </header>
+    <section class="section-main">
+        <h1>Sticky Navigation Bar</h1>
+    </section>
+
+    <section class="section-two">
+        <h2>Protect Rainforests</h2>
+        <p>Lorem ipsum dolor sit amet consectetur, Lorem ipsum, dolor sit amet consectetur adipisicing elit. Sed sunt nesciunt, sapiente, obcaecati soluta voluptas optio consectetur magni ducimus cumque possimus deleniti dolores non consequuntur blanditiis quibusdam fugit explicabo nam. adipisicing elit. Cupiditate expedita iste, assumenda quos saepe natus maiores labore eius consequuntur voluptatem nesciunt, commodi ut distinctio error! Aliquid repellendus quibusdam distinctio enim.</p>
+        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Necessitatibus hic, unde sed eaque laboriosam, nesciunt facilis, a neque exercitationem voluptatum cupiditate quas nisi. Eius delectus illum molestiae sit rerum fugit consequuntur a eveniet labore quae, quos dolorum doloremque expedita veniam! Rerum, possimus quod laudantium veniam placeat repellat porro iusto officiis?</p>
+        <p>Lorem ipsum dolor sit amet consectetur, Lorem ipsum dolor, sit amet consectetur adipisicing elit. Reprehenderit numquam quas facilis, necessitatibus aspernatur enim eos placeat id? Praesentium aspernatur similique harum ullam commodi qui nobis placeat illum ab assumenda. adipisicing elit. Cupiditate expedita iste, assumenda quos saepe natus maiores labore eius consequuntur voluptatem nesciunt, commodi ut distinctio error! Aliquid repellendus quibusdam distinctio enim.</p>
+        <h2>Protect Nature</h2>
+        <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Ipsum, tenetur quasi, quis quia cupiditate libero similique accusamus repudiandae numquam eligendi eum sapiente? Porro ullam corporis sequi maxime quam fuga optio repellendus accusantium iusto numquam inventore adipisci ratione nobis beatae aperiam est voluptatum deleniti necessitatibus quos, totam commodi cupiditate repudiandae cumque.</p>
+        <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Lorem ipsum dolor sit amet consectetur adipisicing elit. Eum, possimus! Atque ipsam adipisci praesentium molestias sit, ratione animi. Voluptatum hic veniam dolore fugiat odit inventore vero beatae minima eos aut! Sed, inventore nemo. Ipsa alias itaque odio voluptate, unde illo modi doloribus dolor consequatur animi, sunt aliquam enim voluptates? Modi, nihil ea.</p>
+    </section>
+
+    <script type="text/javascript">
+        //js for navigation bar effect on scroll
+        window.addEventListener("scroll",function(){
+            var header = document.querySelector("header");
+            header.classList.toggle('sticky', window.scrollY > 0);
+        });
+
+        //js for responsive navigation sidebar menu
+        var menu = document.querySelector('.menu');
+        var menuBtn = document.querySelector('.menu-btn');
+        var closeBtn = document.querySelector('.close-btn');
+
+        menuBtn.addEventListener("click", () => {
+            menu.classList.add('active');
+        });
+        closeBtn.addEventListener("click", () => {
+            menu.classList.remove('active');
+        });
+    </script>
+</body>
+</html>
