@@ -1,0 +1,95 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+}
+section{
+    position: absolute;
+    height: 100%;
+    width: 100%;
+    background: #e3f2fd;
+}
+
+button{
+    font-size: 1rem;
+    font-weight: 400;
+    color: #fff;
+    padding: 14px 22px;
+    border: none;
+    background: #4070f4;
+    border-radius: 6px;
+    cursor: pointer;
+}
+button:hover{
+    background-color: #265df2;
+}
+button.show-modal, .modal-box{
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    box-shadow: 0 5px 10px rgba(0, 0, 0, .2);
+}
+section.active .show-modal{
+    display: none;
+}
+.overlay{
+    position: absolute;
+    height: 100%;
+    width: 100%;
+    background-color: rgba(0, 0, 0, 0.3);
+    opacity: 0;
+    pointer-events: none;
+}
+section.active .overlay{
+    opacity: 1;
+    pointer-events: auto;
+}
+.modal-box{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    max-width: 380px;
+    width: 100%;
+    border-radius: 24px;
+    background-color: #fff;
+    border-radius: 24px;
+    padding: 30px 20px;
+    opacity: 0;
+    pointer-events: none;
+    transition: all 0.3s ease;
+    transform: translate(-50%, -50%) scale(1.1);
+}
+section.active .modal-box{
+    opacity: 1;
+    pointer-events: auto;
+    transform: translate(-50%, -50%) scale(1);
+}
+.modal-box i{
+    font-size: 5rem;
+    color: #4070f4;
+}
+.modal-box h2{
+    margin-top: 15px;
+    font-size: 1.5rem;
+    font-weight: 500;
+    color: #333;
+}
+.modal-box h3{
+    margin-top: 10px;
+    font-size: 1rem;
+    font-weight: 400;
+    color: #333;
+    text-align: center;
+}
+.modal-box .buttons{
+    margin-top: 15px;
+}
+.modal-box button{
+    padding: 10px 12px;
+    font-size: 0.9rem;
+    cursor: pointer;
+    margin: 0px 5px;
+}
