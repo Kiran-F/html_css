@@ -2,4 +2,56 @@
     padding: 0;
     margin: 0;
     box-sizing: border-box;
+    font-family: Arial, Helvetica, sans-serif;
+}
+body{
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: pink;
+}
+.text-box{
+    position: relative;
+    background: #fff;
+    width: 600px;
+    margin: 10px;
+    padding: 0 20px 20px 20px;
+    border-radius: 10px;
+    box-shadow: 0 5px 20px rgb(1 1 1 / 10%);
+}
+.text-box .top-area{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin: 20px 0;
+}
+.text-box .top-area h2{
+    font-size: 1.5em;
+    font-weight: 700;
+}
+.text-box .top-area .copy-btn{
+    background-color: #eee;
+    color: #999;
+    font-size: 1.5em;
+    width: 40px;
+    height: 40px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 50%;
+    cursor: pointer;
+}
+.text-box .top-area .copy-btn:hover{
+    color: #222;
+}
+.text-box textarea{
+    width: 100%;
+    min-height: 310px;
+    font-size: 1em;
+    padding: 10px;
+    outline: none;
+    resize: none;
+    border-radius: 5px;
+    border: 1px solid rgb(254, 150, 168);
 }
