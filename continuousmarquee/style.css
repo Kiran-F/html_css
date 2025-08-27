@@ -1,0 +1,66 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Arial, Helvetica, sans-serif;
+}
+body{
+    font-size: 16px;
+    line-height: 1.5;
+    color: #000;
+    background-color: #fff;
+    padding: 100px 50px;
+}
+h1{
+    text-align: center;
+    margin-block-end: 2.5rem;
+}
+.stock-ticker{
+    font-size: 15px;
+    padding-block: 8px;
+    border-block: 1px solid #000;
+    display: flex;
+    --gap: 20px;
+    gap: var(--gap);
+    overflow: hidden;
+    user-select: none;
+}
+.stock-ticker:hover ul{
+    animation-play-state: paused;
+}
+
+.stock-ticker ul{
+    flex-shrink: 0;
+    min-width: 100%;
+    list-style: none;
+    display: flex;
+    justify-content: space-between;
+    gap: var(--gap);
+    animation: scroll 20s linear infinite;
+}
+@keyframes scroll{
+    to{
+        transform: translateX(calc(-100% - var(--gap)));
+    }
+}
+
+
+.stock-ticker .company,
+.stock-ticker .price{
+    font-weight: bold;
+}
+.stock-ticker .price{
+    margin-inline: 4px;
+}
+.stock-ticker .plus::before{
+    content: '↑';
+}
+.stock-ticker .minus::before{
+    content: '↓';
+}
+.stock-ticker .plus::before, .stock-ticker .plus .change{
+    color: green;
+}
+.stock-ticker .minus::before, .stock-ticker .minus .change{
+    color: red;
+}
