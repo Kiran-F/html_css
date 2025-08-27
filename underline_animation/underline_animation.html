@@ -37,7 +37,7 @@
         font-size: 17px;
         font-weight: 600;
         margin: 0 15px;
-        position: relative; 
+        position: relative;
     }
     nav a:hover{
         color: white;
@@ -45,16 +45,14 @@
     nav a::before{
         content: '';
         position: absolute;
-        bottom: -10px;
-        left: 0px;
+        bottom: -5px;
         width: 0%;
         height: 3px;
         background-color: #ee0653;
+        transition: all .5s;
     }
     nav a:hover::before{
         width: 100%;
-        transition: all .5s;
-        transform-origin: center;
     }
 </style>
 <body>
