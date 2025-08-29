@@ -15,7 +15,7 @@ body{
 }
 .btn{
     position: relative;
-    display: inline-flex;
+    /* display: inline-flex; */
     padding: 20px 50px;
     background: #363636;
     color: #fff;
@@ -34,8 +34,8 @@ body{
     top: var(--y);
     left: var(--x);
     transform: translate(-50%, -50%);
-    width: 0;
-    height: 0;
+    width: 0px;
+    height: 0px;
     background: #2196f3;
     border-radius: 50%;
     transition: all 0.5s ease;
